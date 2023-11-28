@@ -2,31 +2,32 @@
 
 const mysql = require('mysql');
 
-// Connect to database
+// Connect to the database 
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
   database: 'BUEH',
-  port: 3306
+  port: 3306 
 });
-
-// Rest of event submission logic...
 
 function submitEvent(e) {
 
-  // Get form values  
+  // Get form data
+  const data = {
+    name: form.name.value,
+    description: form.description.value,
+    start_date: form.start_date.value,
+    // ...
+  };
 
+  // SQL insert statement
   const sql = "INSERT INTO events SET ?";
-  
-  db.query(sql, data, (err) => {
-    if (err) {
-      console.log(err);
-      return; 
-    }
-    
-    console.log("Event added!");
 
+  // Insert form data into database
+  db.query(sql, data, (err) => {
+    if(err) throw err;
+    console.log("Event data inserted!");
   });
 
 }

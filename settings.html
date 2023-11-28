@@ -1,4 +1,52 @@
 <!-- settings.html -->
+
 <h1>BUEH Settings</h1>
 
-<!-- Settings page content goes here -->
+<h2>Change Email</h2>
+<form>
+  <label>New Email:</label>
+  <input type="email">
+  <button>Update Email</button>
+</form>
+
+<h2>Change Password</h2>
+<form>
+  <label>Current Password:</label>
+  <input type="password">
+  
+  <label>New Password:</label>
+  <input type="password">
+  
+  <label>Confirm New Password:</label>
+  <input type="password">
+  
+  <button>Change Password</button>
+</form>
+
+<h2>Reset Password</h2>
+<form>
+  <label>Email:</label>
+  <input type="email">
+  
+  <button>Send Reset Link</button>
+</form>
+
+<button id="logoutBtn">Log Out</button>
+
+<script>
+  // Add event listener for logout button
+  const logoutBtn = document.getElementById('logoutBtn');
+  logoutBtn.addEventListener('click', () => {
+    // Logout logic
+  });
+</script>
+
+<button id="homeBtn">Back to Home</button>
+
+<script>
+  const homeBtn = document.getElementById('homeBtn');
+  
+  homeBtn.addEventListener('click', () => {
+    window.location.href = 'main.html'; 
+  });
+</script>

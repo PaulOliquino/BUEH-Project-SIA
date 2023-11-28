@@ -2,7 +2,15 @@
 
 <h1>BUEH Main Hub</h1>
 
-<button>Settings</button>
+<button id="settingsBtn">Settings</button> 
+
+<script>
+const settingsBtn = document.getElementById('settingsBtn');
+
+settingsBtn.addEventListener('click', () => {
+  window.location.href = 'settings.html';
+});
+</script>
 
 <form action="addevent.html">
   <button type="submit">Add Event</button>
@@ -13,3 +21,4 @@
 </div>
 
 <!-- Page content goes here -->
+
