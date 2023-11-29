@@ -1,33 +1,44 @@
 // addevent.js
 
-const mysql = require('mysql');
+// Import required modules
+const mysql = require('mysql');  
 
-// Connect to the database 
+// Database connection config
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'BUEH',
-  port: 3306 
+  user: 'admin',
+  password: 'admin',
+  database: 'bueh',
+  port: 3306
 });
 
+// Get reference to form
+const form = document.getElementById('eventForm');
+
+// Submit event handler
 function submitEvent(e) {
 
-  // Get form data
-  const data = {
-    name: form.name.value,
-    description: form.description.value,
-    start_date: form.start_date.value,
-    // ...
-  };
+  // Prevent default form submit
+  e.preventDefault();
 
-  // SQL insert statement
-  const sql = "INSERT INTO events SET ?";
+  // Get form values
+  const name = form.elements['name'].value;
+  const description = form.elements['description'].value;
+  const start_date = form.elements['start_date'].value;
 
-  // Insert form data into database
-  db.query(sql, data, (err) => {
-    if(err) throw err;
-    console.log("Event data inserted!");
+  // SQL query
+  const sql = "INSERT INTO buevents (name, description, start_date) VALUES (?, ?, ?)";
+
+  // Execute query
+  db.query(sql, [name, description, start_date], (err, result) => {
+    if (err) {
+      // Handle error
+    } else {
+      // Handle success  
+    }
   });
 
 }
+
+// Attach submit event to form
+form.addEventListener('submit', submitEvent);

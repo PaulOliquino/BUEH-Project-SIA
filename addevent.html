@@ -3,35 +3,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="module" src="addevent.js"></script>
+  <script src="addevent.js"></script> 
 </head>
 
 <body>
 
   <h1>Add BUEH Event</h1>
+  
+  <div id="msg"></div>
 
   <form id="eventForm">
-  <label>Name of Event:</label>
-  <input type="text">
 
-  <label>Description:</label>
-  <textarea></textarea>
+    <label>Name of Event:</label>
+    <input type="text" id="name" name="name" required>
 
-  <label>Start Date:</label> 
-  <input type="date">
-  
-  <label>Start Time:</label>
-  <input type="time">
+    <label>Description:</label>
+    <textarea id="description" name="description" required></textarea>
 
-  <label>End Date:</label>
-  <input type="date">
-  
-  <label>End Time:</label>
-  <input type="time">
+    <label>Start Date:</label>
+    <input type="date" id="start_date" name="start_date" required>
 
+    <label>Start Time:</label>
+    <input type="time" id="start_time" name="start_time" required>
 
+    <label>End Date:</label> 
+    <input type="date" id="end_date" name="end_date" required>
 
-    <button>Submit Event</button>
+    <label>End Time:</label>
+    <input type="time" id="end_time" name="end_time" required>
+
+    <button type="submit">Submit Event</button>
+
   </form>
 
 </body>
