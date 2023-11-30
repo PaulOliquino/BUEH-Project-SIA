@@ -1,24 +1,97 @@
-<!-- main.html -->
+<!DOCTYPE html>
+<html lang="en">
 
-<h1>BUEH Main Hub</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>BUEH Main Hub</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Montserrat:wght@200&display=swap');
+    </style>
+    <style>
+        .preloader {
+            z-index: 9999; /* Ensure a high z-index to place the preloader above other elements */
+        }
+    </style>
+</head>
 
-<button id="settingsBtn">Settings</button> 
+<body>
 
-<script>
-const settingsBtn = document.getElementById('settingsBtn');
+    <div class="picture">
+        <img src="D:\Coding Projects\xampp\htdocs\BUEH\BUEH-Project\images\Bicol_University.png" alt="bulogo">
+    </div>
 
-settingsBtn.addEventListener('click', () => {
-  window.location.href = 'settings.html';
-});
-</script>
+    <div class="container">
 
-<form action="addevent.html">
-  <button type="submit">Add Event</button>
-</form>
+        <div class="button-container">
+          <button id="settingsBtn" onclick="window.location.href='settings.html'">Settings</button>
+            <form action="addevent.html">
+                <button type="submit">Add Event</button>
+            </form>
+            <a href="calendar.html">View Events Calendar</a>
+        </div>
 
-<div>
-  <a href="calendar.html">View Events Calendar</a>
-</div>
+        <div class="card">
+            <h1>BUEH Main Hub</h1>
+        </div>
 
-<!-- Page content goes here -->
+        <div class="description" alt="description">
+            <p>
+                The Bicol University Events Management System<br>
+                Or Bicol University Events Hub (BUEH)<br>
+                <br>
+                Welcome to BUEH! Your One-Stop HUD for BU Events!
+            </p>
+        </div>
+    </div>
 
+    <div class="preloader">
+        <div class="welcome-header">Welcome to Bicol University Events Hub!</div>
+        <div class="loop cubes">
+            <div class="item cubes"></div>
+            <div class="item cubes"></div>
+            <div class="item cubes"></div>
+            <div class="item cubes"></div>
+            <div class="item cubes"></div>
+            <div class="item cubes"></div>
+        </div>
+    </div>
+
+    <script>
+        // Add a class to trigger the fade-out animation after 3 seconds
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                const preloader = document.querySelector('.preloader');
+                preloader.classList.add('fade-out');
+                preloader.addEventListener('animationend', function () {
+                    preloader.style.display = 'none'; // Hide the preloader after fade-out
+                });
+            }, 3000);
+        });
+    </script>
+
+    <script>
+      // Add a class to trigger the fade-out animation after 3 seconds
+      document.addEventListener("DOMContentLoaded", function () {
+          setTimeout(function () {
+              const preloader = document.querySelector('.preloader');
+              preloader.classList.add('fade-out');
+              
+              // Delay the removal of the preloader after the animation completes
+              setTimeout(function () {
+                  preloader.remove(); // Remove the preloader from the DOM after fade-out
+              }, 500); // Adjust the delay time as needed
+          }, 3000);
+      });
+    </script>    
+    
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+
+body{
+    font-family: 'Patua One', sans-serif;
+    background: rgb(255,255,255);
+    background: white; 
+}
+.box{
+    width: 600px;
+    height: 600px;
+    background-color: rgba(252, 247, 247, 0.8);
+    box-shadow: 0 0 10px rgba(35, 118, 200, 0.93);
+    margin: auto;
+    margin-top: 50px;    
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Patua One', sans-serif;
+
+}
+.box .header{
+    background-color: darkorange;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.box .header p{
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+  
+label {
+    display: block;
+    margin-top: 10px;
+}
+  
+input,
+textarea {
+    font-family: 'Patua One', sans-serif;
+    text-align: center;
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+}
+  
+button {
+    --bg: blue;
+    --text-color: #fff;
+    position: relative;
+    width: 150px;
+    border: none;
+    background: var(--bg);
+    color: var(--text-color);
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    box-shadow: rgba(0, 0, 255, 0.733) 0px 7px 2px, #000 0px 8px 5px;
+  }
+  
+  button:hover {
+    opacity: 1;
+  }
+  
+  button:active {
+    top: 4px;
+    box-shadow: rgba(0, 0, 255, 0.918) 0px 3px 2px,#000 0px 3px 5px;
+  }
+  
+button:hover {
+    background-color: rgba(0, 0, 255, 0.884);
+}

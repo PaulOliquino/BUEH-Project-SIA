@@ -1,0 +1,66 @@
+/* setting.css */
+
+body {
+    background-color: #f2f2f2; /* 80% white */
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default body margin */
+  }
+  
+  .container {
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding to the container */
+  }
+  
+  h1, h2 {
+    color: #333; /* Dark gray for headings */
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #007bff; /* 10% blue */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+/* In setting.css */
+
+#logoutBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#homeBtn {
+  position: absolute;
+  top: 20px;
+  right: 185px;
+}
+
+#logoutBtn {
+  right: 100px; 
+}

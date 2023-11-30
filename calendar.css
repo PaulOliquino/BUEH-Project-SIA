@@ -1,0 +1,52 @@
+/* calendar.css */
+
+body {
+    background-color: #f2f2f2; /* 80% white */
+    font-family: 'Roboto', sans-serif;
+    margin: 0; /* Remove default body margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    color: #333; /* Dark gray for headings */
+    text-align: center;
+    margin-bottom: 20px; /* Add margin below the header */
+    position: absolute;
+    top: 30px;
+  }
+  
+  #calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #calendar {
+    background-color: rgba(255, 255, 255, 0.8); /* Glassmorphism effect - 80% white with transparency */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+    width: 80%; /* Adjusted to 80% of the screen width */
+    max-width: 600px; /* Set a maximum width to avoid excessive width on larger screens */
+  }
+  
+  .fc-toolbar {
+    background-color: #007bff; /* 10% blue */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+  }
+  
+  .fc-toolbar-title, .fc-button {
+    color: #fff; /* White text on the toolbar */
+  }
+  
+  .fc-event {
+    background-color: #ff7f50; /* 10% orange */
+    border: none;
+    border-radius: 4px;
+  }
+  
